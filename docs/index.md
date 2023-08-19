@@ -1,5 +1,5 @@
-# Title
+# Pickling WIth Errors
 ## Introduction
-## Topic 1
+In this weeks episode, we learn about pickling and the fun one can have with error handling.
 ### Subtopic
 ## Summary
