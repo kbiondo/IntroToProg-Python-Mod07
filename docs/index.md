@@ -1,7 +1,4 @@
 # Pickling With Errors
-## Introduction
-In this weeks episode, we learn about pickling and all the fun around error handling.
-### Subtopic
 ## Summary
 In this weeks episode, we learn about pickling and all the fun around error handling. Week 7 of the course introduced pickling and error handling in python. The following paragraphs outline the examples I found on the internet and the methods that were used to create a game save state into a state.bin file as well as how the try, exception, and finally error handling block statements work. 
 ## Intended Outcome
