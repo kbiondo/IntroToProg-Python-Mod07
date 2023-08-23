@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-## IntroToProg-Python-Mod07 - Assignment06 Website 
-
-Made a quick website from a gitlab repo. 
-=======
 # Pickling With Errors
 ## Introduction
-<<<<<<< HEAD
 In this weeks episode, we learn about pickling and all the fun around error handling.
 ### Subtopic
 ## Summary
->>>>>>> cdcfec42c09f81d78d6c8c31ce222ecc213d91cf
-=======
 In this weeks episode, we learn about pickling and all the fun around error handling. Week 7 of the course introduced pickling and error handling in python. The following paragraphs outline the examples I found on the internet and the methods that were used to create a game save state into a state.bin file as well as how the try, exception, and finally error handling block statements work. 
 ## Intended Outcome
 The intended outcome of this week is the example of pickling game save states and error handling. 
@@ -29,43 +21,33 @@ I need to do a little more research on why the EOF error is occurring.
 # ChangeLog (Who,When,What):
 # KBiondich,8-18-2023,Modified code to complete assignment 07
 # ---------------------------------------------------------------------------- #
-
-
-
 # learning how to pickle
 # From: https://snyk.io/blog/guide-to-python-pickle/
 # Pickling is a way to convert a python object (list, dict, etc.) into a character stream.
 # The idea is that this character stream contains all the information necessary to reconstruct the object in another python script.
 # The process of converting a python object into a character stream is called pickling or serialization.
 # The reverse process is called unpickling or deserialization.
-
 import pickle
-
 # To pickle a file into an object:
-
 # This example from snyk creates an example game that dumps the state of the game into a file called state.bin
 class GameItem:
     def __init__(self, name, cost):
         self.name = name
         self.cost = cost
-
 # this is an example of how a game might save a play state
 class GameState:
     def __init__(self, player_coordinates, obstacles, items):
         self.player_coordinates = player_coordinates
         self.obstacles = obstacles
         self.items = items
-
 # Constructing a specifc state and pickling it into an object:
 player_coordinates = (3, 2)
 obstacles = { (1, 1), (5, 6), (7, 4), (0, -1) }
 items = [ GameItem("Sword", 500), GameItem("Potion", 150) ]
-
  # "wb" because we want to write in binary mode
 state = GameState(player_coordinates, obstacles, items)
 saveState = open("saveState.bin", "wb")
 pickle.dump(state, saveState)
-
 # To unpickle a file into an object:
 # "rb" because we want to read in binary mode
 savedState = open("saveState.bin", "rb") 
@@ -74,7 +56,6 @@ try:
 except EOFError:
     print("End of file error")
     state = GameState(player_coordinates, obstacles, items)
-
 print("Player coordinates:", state.player_coordinates)
 print("Obstacles:", state.obstacles)
 print("Number of items:", len(state.items))
@@ -88,7 +69,6 @@ I then googled a few sites about handling errors and came across this website (P
 # Learning how to do error handling
 # From: https://www.geeksforgeeks.org/python-exception-handling/
 # this site explains some of the types of error handling that is built into python and how to use them effectively.
-
 # Simple error to handle runtime issues
 a = [1, 2, 3]
 try:
@@ -100,8 +80,6 @@ try:
  
 except:
     print ("uh oh, you chose a 4th element")
-
-
 # another error example but with using of the finally exception clause:
  
 # No exception Exception raised in try block
@@ -123,8 +101,5 @@ finally:
 This week’s objective was interesting. Pickling can be a useful resource for saving obscured data which I may use at work. Although I haven’t quite figured out how to solve the End OF File error, I see this as a useful exercise. The error handling portion of the objective is also useful to understand, especially as I build applications for work. Another big understanding is the vast amount of examples around the web. I found that I could google and find examples for everything I was trying to accomplish. 
 ## References
   Python Exception Handling. (n.d.). Retrieved from Geeks for Geeks: https://www.geeksforgeeks.org/python-exception-handling/  
-  
+
   The ultimate guide to Python pickle. (n.d.). Retrieved from snyk.io: https://snyk.io/blog/guide-to-python-pickle/
-
-
->>>>>>> 273040dffd08c6cae00572983cfc2ea77df6ee0f
